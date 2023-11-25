@@ -3,6 +3,13 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../styles/main.css'
 
+/*
+  * This is the root component of the application.
+  * It is used to add global styles and scripts.
+  * It is also used to persist layout between page changes.
+  * Can use this to keep state when navigating between pages.
+  */
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>

@@ -1,9 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+/*
+  * A custom document that wraps around your entire Next.js application. 
+  * It serves as the main document template.
+*/
+
 export default function Document() {
   const meta = {
-    title: 'Next.js Blog Starter Kit',
-    description: 'Clone and deploy your own Next.js portfolio in minutes.',
+    title: 'Nick\'s Portfolio',
+    description: 'Basic information about Nick Ambrose.',
     image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png',
   }
 
