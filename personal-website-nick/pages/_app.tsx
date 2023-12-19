@@ -8,6 +8,8 @@ import '../styles/main.css'
   * It is used to add global styles and scripts.
   * It is also used to persist layout between page changes.
   * Can use this to keep state when navigating between pages.
+  * For more info on exactly what this page does, see:
+  * https://nextjs.org/docs/pages/building-your-application/routing/custom-app
   */
 
 export default function App({ Component, pageProps }: AppProps) {
