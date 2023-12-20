@@ -6,33 +6,54 @@ date: 2023-11-25
 
 ## About Me
 
-Hi, I'm Nick Ambrose, a Senior Computer Science major at Cal Poly, graduating in June 2024. 
-I have a diverse set of technical skills, including software engineering, operating systems, and data science. 
-My experience ranges from working as an IOS developer at Better Texter Inc. to being a Computer Science Tutor at Cal Poly. 
-I've also worked on some cool projects like the Workout API and the Screen Squad movie website. 
-Checkout my projects page for more info on those! 
-I'm comfortable with languages like Python, JavaScript, and Swift, and I'm excited to bring my skills and enthusiasm to the tech industry.
+Hello, and thanks for stopping by my website! My name is Nick Ambrose, and I'm a senior Computer Science student at Cal Poly, San Luis Obispo.
+During my academic journey at Cal Poly, coupled with hands-on professional experience, I've honed my skills as a full-stack developer, 
+immersing myself in a diverse array of technologies. Curious about my projects and skills? Take a peek at my resume, browse my GitHub, 
+or connect with me on LinkedIn for a deeper dive into my professional world! When I'm not in front of 
+a computer screen, you might find me hiking through nature's wonders, perfecting my swing on the golf course, rolling on the mats practicing Jiu-Jitsu, 
+or traveling to new and exciting destinations. I'm eagerly counting down to June 2024, when I'll graduate and embark on the next big adventure as a software engineer. 
+I'm actively exploring opportunities where I can contribute, grow, and make a tangible impact. If you're interested in chatting, brainstorming, or just saying hi, don't
+hesitate to reach out!
+
+
+
 
 ---
 import Image from 'next/image'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-  <div>
-    <i className="bi bi-linkedin"></i> LinkedIn [@NickAmbrose](https://www.linkedin.com/in/nick-ambrose-70a5101ba/)
-    <br />
-    <i className="bi bi-github"></i> GitHub [@nickambrose7](https://github.com/nickambrose7)
-    <br />
-    <i className="bi bi-envelope-fill"></i> Email nickambrose7@gmail.com
-    <br />
-    <i className="bi bi-github"></i>
-  </div>
-  <Image
-    src="/images/headShot.jpg"
-    alt="Nick Ambrose"
-    width={300}
-    height={500}
-    priority
-    className="next-image"
-  />
-</div>
+export function PersonalInfo() {
+  return (
+    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', marginRight: '150px', alignItems: 'flex-start' }}>
+        <p><i className="bi bi-geo-alt-fill"></i> San Luis Obispo, CA</p>
+        <p><i className="bi bi-telephone-fill"></i> 602-350-8228</p>
+        <p><i className="bi bi-envelope-fill"></i> nickambrose7@gmail.com</p>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Image
+          src="/images/headShot.jpg"
+          alt="Nick Ambrose"
+          width={250}
+          height={400}
+          priority
+          className="next-image"
+        />
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '20px' }}>
+          <a href="https://www.linkedin.com/in/nick-ambrose-70a5101ba/" target="_blank">
+            <i className="bi bi-linkedin" style={{ fontSize: '2rem', marginBottom: '10px', margin: "30px" }}></i>
+          </a>
+          <a href="https://github.com/nickambrose7" target="_blank">
+            <i className="bi bi-github" style={{ fontSize: '2rem', margin: "30px" }}></i>
+          </a>
+          <a href="/files/resume.pdf" target="_blank">
+            <i className="bi bi-file-earmark-person" style={{ fontSize: '2rem', margin: "30px" }}></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+<PersonalInfo />
 

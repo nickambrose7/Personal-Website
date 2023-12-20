@@ -9,7 +9,7 @@ export default function Document() {
   const meta = {
     title: 'Nick\'s Portfolio',
     description: 'Nick\'s Portfolio website, all you need to know about him!',
-    image: 'logo.png',
+    image: '/images/logo.png',
   }
 
   return (
