@@ -1,11 +1,6 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
 
 // Create a local dark theme instance
 const darkTheme = createTheme({
@@ -19,7 +14,13 @@ export default function Project({ title, description, imageUrl, projectUrl }) {
     <ThemeProvider theme={darkTheme}>
       <Card sx={{ maxWidth: 1000 }}>
         <CardMedia
-          sx={{ height: 300 }}
+          sx={{
+            height: 300,
+            transition: 'transform 0.3s ease-in-out',
+            '&:hover': {
+              transform: 'scale(1.05)', // Scales the image up slightly on hover
+            }
+          }}
           image={imageUrl}
           title={title}
         />
@@ -33,9 +34,9 @@ export default function Project({ title, description, imageUrl, projectUrl }) {
         </CardContent>
         <CardActions>
           <Button size="small" href={projectUrl} target="_blank">Learn More</Button>
-          {/* Add more actions or buttons if needed */}
         </CardActions>
       </Card>
     </ThemeProvider>
   );
 }
+
