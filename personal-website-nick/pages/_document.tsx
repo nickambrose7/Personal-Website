@@ -26,6 +26,9 @@ export default function Document() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/devicon/devicon.min.css" 
+        />
       </Head>
       <body>
         <Main />
