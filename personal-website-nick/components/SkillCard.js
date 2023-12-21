@@ -18,7 +18,7 @@ export default function SkillCard({ skillName, iconName, iconLibrary }) {
   };
 
   const cardStyle = {
-    width: '120px',
+    width: '130px',
     display: 'inline-block',
     textAlign: 'center',
     margin: '10px',
