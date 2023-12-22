@@ -15,7 +15,7 @@ export default function Project({ title, description, imageUrl, projectUrl }) {
       <Card sx={{ maxWidth: 1000 }}>
         <CardMedia
           sx={{
-            height: 300,
+            height: 450,
             transition: 'transform 0.3s ease-in-out',
             '&:hover': {
               transform: 'scale(1.05)', // Scales the image up slightly on hover
