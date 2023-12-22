@@ -9,7 +9,7 @@ const darkTheme = createTheme({
   },
 });
 
-export default function Project({ title, description, mediaUrl, projectUrl }) {
+export default function Project({ title, description, mediaUrl, projectUrl}) {
   // Determine if the mediaUrl is a video or an image
   const isVideo = mediaUrl && mediaUrl.endsWith('.mp4');
 
@@ -18,7 +18,7 @@ export default function Project({ title, description, mediaUrl, projectUrl }) {
       <Card sx={{ maxWidth: 1000 }}>
         {isVideo ? (
           <video
-            style={{ height: 450, width: '100%' }}
+            style={{ height: 400, width: '100%', objectFit: 'cover', objectPosition: '50% 50', marginTop: '0px' }}
             src={mediaUrl}
             title={title}
             loop
