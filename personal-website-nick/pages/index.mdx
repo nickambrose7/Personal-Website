@@ -26,12 +26,15 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export function PersonalInfo() {
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', marginRight: '150px', alignItems: 'flex-start' }}>
+  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+    <div className="personal-info-container" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'left' }}>
+      <div className="contact-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
         <p style={{ marginBottom: '60px' }}><i className="bi bi-geo-alt-fill"></i> San Luis Obispo, CA</p>
         <p style={{ marginBottom: '60px' }}><i className="bi bi-telephone-fill"></i> 602-350-8228</p>
         <p style={{ marginBottom: '60px' }}><i className="bi bi-envelope-fill"></i> nickambrose7@gmail.com</p>
       </div>
+    </div>
+    <div className="picture" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'right' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Image
           src="/images/headShot.jpg"
@@ -54,6 +57,7 @@ export function PersonalInfo() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 
