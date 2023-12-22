@@ -9,21 +9,33 @@ const darkTheme = createTheme({
   },
 });
 
-export default function Project({ title, description, imageUrl, projectUrl }) {
+export default function Project({ title, description, mediaUrl, projectUrl }) {
+  // Determine if the mediaUrl is a video or an image
+  const isVideo = mediaUrl && mediaUrl.endsWith('.mp4');
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Card sx={{ maxWidth: 1000 }}>
-        <CardMedia
-          sx={{
-            height: 450,
-            transition: 'transform 0.3s ease-in-out',
-            '&:hover': {
-              transform: 'scale(1.05)', // Scales the image up slightly on hover
-            }
-          }}
-          image={imageUrl}
-          title={title}
-        />
+        {isVideo ? (
+          <video
+            style={{ height: 450, width: '100%' }}
+            src={mediaUrl}
+            title={title}
+            loop
+            muted
+            autoPlay
+          />
+        ) : (
+          <CardMedia
+            sx={{
+              height: 450,
+              transition: 'transform 0.3s ease-in-out',
+              '&:hover': { transform: 'scale(1.05)' }
+            }}
+            image={mediaUrl}
+            title={title}
+          />
+        )}
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
@@ -39,4 +51,7 @@ export default function Project({ title, description, imageUrl, projectUrl }) {
     </ThemeProvider>
   );
 }
+
+
+
 
