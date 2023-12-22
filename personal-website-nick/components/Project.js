@@ -40,7 +40,7 @@ export default function Project({ title, description, mediaUrl, projectUrl}) {
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" style={{ fontSize: '1rem' }}>
             {description}
           </Typography>
         </CardContent>
