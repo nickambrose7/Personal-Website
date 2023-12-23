@@ -30,6 +30,7 @@ Supabase was a game-changer for hosting our Workout API's Postgres database. Its
 ## Vercel: Effortless Deployment
 I've really taken a liking to Vercel. It's known for hosting static sites, but it worked fine for deploying my Workout API too. The platform makes life easier by allowing for instant deployment, automatic scaling, and minimal supervision, all with next to no configuration hassle. I'm a big fan of any tool that makes my life easier, and Vercel is definitly one of those.
 
+## Add sections for React, Express.js, Axios, Postman, MongoDB
 
 ## Lessons Learned: Beyond Technology
 - Reflect on the non-technical lessons from working with these technologies.
