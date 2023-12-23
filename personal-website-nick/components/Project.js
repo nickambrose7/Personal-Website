@@ -15,7 +15,7 @@ export default function Project({ title, description, mediaUrl, projectUrl}) {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Card sx={{ maxWidth: 1000 }}>
+      <Card sx={{ maxWidth: 1200 }}>
         {isVideo ? (
           <video
             style={{ height: 400, width: '100%', objectFit: 'cover', objectPosition: '50% 50', marginTop: '0px' }}
@@ -30,7 +30,9 @@ export default function Project({ title, description, mediaUrl, projectUrl}) {
             sx={{
               height: 450,
               transition: 'transform 0.3s ease-in-out',
-              '&:hover': { transform: 'scale(1.05)' }
+              '&:hover': { transform: 'scale(1.05)' },
+              objectFit: 'contain',
+              objectPosition: 'center'
             }}
             image={mediaUrl}
             title={title}
