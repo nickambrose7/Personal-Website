@@ -30,7 +30,31 @@ Supabase was a game-changer for hosting our Workout API's Postgres database. Its
 ## Vercel: Effortless Deployment
 I've really taken a liking to Vercel. It's known for hosting static sites, but it worked fine for deploying my Workout API too. The platform makes life easier by allowing for instant deployment, automatic scaling, and minimal supervision, all with next to no configuration hassle. I'm a big fan of any tool that makes my life easier, and Vercel is definitly one of those.
 
-## Add sections for React, Express.js, Axios, Postman, MongoDB
+## React: Building User Interfaces with Ease
+Since diving into React, I've learned a lot about its core elements: Props for passing data, Hooks for adding state to functional components, Routing for seamless page navigation, and Event Handling for interactive UIs. These essentials, combined with my knack for designing reusable components and managing state, have empowered me to craft dynamic and responsive interfaces. I especially enjoy blending React's capabilities with Bootstrap's styling to create visually appealing layouts. Each React project is a journey of continuous learning, but I'm thrilled with the skills I've developed so far in this versatile framework.
+
+## Express.js: Simplifying Backend Development
+Express.js has been great for backend development. Its minimalist approach, combined with powerful routing capabilities, greatly eased the process of building RESTful APIs.
+
+## Axios: Streamlining HTTP Requests
+Axios, with its promise-based structure, has been instrumental in handling HTTP requests. Its ease of use for making asynchronous calls and handling responses efficiently made it an integral part of my toolkit.
+
+## Postman: Testing APIs Made Simple
+Postman has been indispensable for API testing. Its user-friendly interface and comprehensive testing capabilities allowed me to thoroughly test and debug APIs, ensuring reliability and performance.
+
+## MongoDB: Navigating NoSQL Databases
+Exploring MongoDB introduced me to the world of NoSQL databases. Its flexible schema design and scalability were key in managing datasets effectively, my main experience came in using mongoDB cloud atlas which provided an easy way to deploy, manage, and scale MongoDB databases in the cloud.
+
+
+## CI with GitHub Actions: Automating Workflows
+GitHub Actions was my first exposure to Continuous Integration (CI). The configuration was straightforward, offering peace of mind as each code push automatically triggered build and tesing processes. This not only saved time but also ensured that any integration issues were caught early, significantly improving code quality and efficiency in the development cycle.
+
+## Modeling: ER & UML Diagrams
+My experience with modeling using ER (Entity-Relationship) and UML (Unified Modeling Language) diagrams sharpened my ability to design and visualize system architectures. ER diagrams helped me conceptualize database relationships, while UML diagrams were invaluable for outlining class structures and interactions in complex software systems. These modeling tools are crucial for planning and communicating system designs effectively. They also taught me how helpful it is to have a well-thoughtout plan before writing a single line of code.
+
+
+## Agile Development: Embracing Flexibility and Collaboration
+Agile Development profoundly shaped my approach to project management. Embracing Agile's iterative process, I learned to value adaptability and teamwork in rapidly changing environments. This methodology highlighted the importance of regular feedback, continuous improvement, and effective communication within a team. It wasn't just about following a set of practices, but more about cultivating a mindset geared towards collaborative problem-solving and customer-focused product development. Agile has been instrumental in my projects, ensuring that the end product truly aligns with user needs and expectations.
 
 ## Lessons Learned: Beyond Technology
 - Reflect on the non-technical lessons from working with these technologies.
