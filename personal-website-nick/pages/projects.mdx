@@ -43,9 +43,14 @@ import Project from 'components/Project';
 ---
 <Project 
   title="Custom Threading Library" 
-  description="Be sure to mention how we manipuleated the return address stack to create threads" 
+  description="This library offers an API for C programs to create and manage threads, employing a round-robin scheduler to pick which thread gets to run next.
+  Tackling the challenge of thread creation in C, especially with just one register swapping function, really tested my skills, but it essentially came down to 
+  two key tasks. First off, we need some space for each thread's stack, so I used mmap to carve out a chunk of heap memory for this purpose. This step includes
+  pushing a return address onto each thread's stack to prep them for launch. The second part involves switching between threads while keeping track of the previous
+  thread's status. For this, I used a struct to store each thread's registers and stack pointer. Working on this project was an eye-opener, giving me a deep dive 
+  into the mechanics of thread creation and operation. And let me be honest, debugging was an absolute nightmare!" 
   mediaUrl="/images/threading.png" 
-  projectUrl="https://github.com/project2"
+  projectUrl="https://github.com/nickambrose7/Threading-Library"
 />
 ---
 <Project 
