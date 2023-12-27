@@ -78,14 +78,25 @@ import Project from 'components/Project';
 ---
 <Project 
   title="Tiny File System" 
-  description="Talk about what went into file system design and the features mine supports." 
+  description="The Tiny File System (TFS) is a streamlined file system developed to handle essential file operations 
+  like create, read, write, and delete. Incorporating four primary block types – superblock, inode blocks, data blocks, and free blocks – 
+  TFS is structured around the use of linked lists for efficient management of free blocks, inodes, and file extents. The most challenging aspect 
+  of this project involved management of these linked lists and rigorous error checking, a critical requirement in file system development to 
+  ensure data integrity and system consistency. Additionally, I engineered a library functioning as a disk driver, utilizing a file to mimic actual 
+  disk storage. This project greatly enhanced my comprehesion of file system architecture, offering hands-on experience in the complexities 
+  of designing and maintaining a reliable and efficient file system." 
   mediaUrl="/images/filesystem.png" 
   projectUrl="https://github.com/nickambrose7/Tiny-File-System"
 />
 ---
 <Project 
   title="Memory Simulator" 
-  description="Talk about implementing paging and using " 
+  description="The Memory Simulator, is a Python script designed to emulate the functionalities of a computer's memory system. This simulator
+   translates logical memory addresses into physical addresses, while also replicating the operations of critical components such as the 
+   Translation-Lookaside-Buffer (TLB), Page Table, Disk, and RAM. A focal point of the simulator is its tracking of page faults and TLB hits, 
+   allowing us to analize the effectivness of different page replacement algorithms. It incorporates three page replacement algorithms, including 
+   First In First Out (FIFO), Least Recently Used (LRU), and Optimal. This project provided me with an exploration into the 
+   dynamics of memory management, deepening my understanding of its intricate processes and the critical role it plays in computing systems. " 
   mediaUrl="/images/memory.png" 
   projectUrl="https://github.com/nickambrose7/memory-simulator"
 />
