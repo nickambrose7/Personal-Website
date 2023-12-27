@@ -13,7 +13,8 @@ import Project from 'components/Project';
   description="Better Texter is an innovative iMessage application that enhances text communication using artificial intelligence. 
   It allows users to convert texts into various tones like professional, friendly, or humorous, and offers translation into nine languages. 
   A key feature is its smart voice texting, which lets users dictate messages, transforming them into well-structured texts with perfect grammar in any chosen tone. 
-  Additionally, it offers personalization options through a companion app outside of iMessage. The app has recently gained popularity, surpassing 100 downloads on the App Store." 
+  Additionally, it offers personalization options through a companion app outside of iMessage.
+  Without any dedicated marketing efforts, Better Texter has organically garnered attention and surpassed 100 downloads on the App Store, highlighting its potential and user interest." 
   mediaUrl="/images/BetterTexterwebsitemv.mp4" 
   projectUrl="https://apps.apple.com/us/app/better-texter/id6451396342"
 />
@@ -22,7 +23,8 @@ import Project from 'components/Project';
   title="Workout API" 
   description="The Workout API is a RESTful service utilizing the FastAPI framework and a Postgres database hosted on Supabase. 
   It offers endpoints for user management, workout recommendations, logs, and goal setting. 
-  A notable feature is its ability to predict weight loss based on workout logs and calculate a custom workout plan using basal metabolic rate and daily caloric deficit. 
+  A standout feature of the Workout API is its predictive model that estimates weight loss from workout activities, 
+  and designs personalized workout plans based on the user's basal metabolic rate and daily calorie deficit.
   Working on this project, I gained experience using FastAPI, Alembic, Faker, and SQLAlchemy, and learned important lessons such as 
   the significance of thorough documentation, managing concurrent requests,
   and protecting against injection attacks." 
@@ -32,12 +34,14 @@ import Project from 'components/Project';
 ---
 <Project 
   title="Threading Library" 
-  description="This library offers an API for C programs to create and manage threads, employing a round-robin scheduler to pick which thread gets to run next.
-  Tackling the challenge of thread creation in C, especially with just one register swapping function, really tested my skills, but it essentially came down to 
-  two key tasks. First off, we need some space for each thread's stack, so I used mmap to carve out a chunk of heap memory for this purpose. This step includes
-  pushing a return address onto each thread's stack to prep them for launch. The second part involves switching between threads while keeping track of the previous
-  thread's status. For this, I used a struct to store each thread's registers and stack pointer. Working on this project was an eye-opener, giving me a deep dive 
-  into the mechanics of thread creation and operation. And let me be honest, debugging was an absolute nightmare!" 
+  description="
+  This library provides an API for C programmers to create and manage threads. It uses a round-robin scheduler, a simple method based on a queue, to decide which thread runs next. 
+  The journey of creating threads in C was both challenging and rewarding, and it involved two critical stages. The first stage was allocating memory for each thread's stack.
+  This meant setting aside a specific area in memory for each thread's operations. More than just allocating space, I meticulously prepared each stack, ensuring it was correctly 
+  configured and primed for the thread's execution. The second stage focused on smoothly transitioning control between threads while maintaining an accurate record of each thread's 
+  current state. For this, I employed a data structure to track the essential elements of each thread, such as their registers and stack pointer. Diving into this project opened my 
+  eyes to the intricate world of thread management. And I won't sugarcoat it - the debugging process was a real challenge!
+  " 
   mediaUrl="/images/threading.png" 
   projectUrl="https://github.com/nickambrose7/Threading-Library"
 />
@@ -45,13 +49,11 @@ import Project from 'components/Project';
 <Project 
   title="Divorce Prediction Machine Learning Model" 
   description="
-  In a world where divorce rates are climbing, understanding the underlying factors is more crucial than ever. Our project ventures into the complex world of marital relationships, 
-  utilizing Data Science techniques to predict the likelihood of divorce based on survey responses. We focused our study on a dataset from a survey among Romanian 
-  couples, comprising 54 questions that capture various facets of a relationship, including communication, problem-solving, and compatibility. Our analysis includes 
-  data preprocessing, correlation analysis, K-Means clustering, cross validation for feature selection, K-Nearest Neighbors (KNN) modeling, and sentiment analysis. 
-  One of the most challenging
-  aspects of this project was developing custom K-Means and KNN algorithms from scratch. This process, though daunting, proved to be a very rewarding 
-  learning journey, offering deep insights into the mechanics of these algorithms and their application in understanding human relationships.
+  This project dives into the complexities of marital relationships using Data Science to predict divorce likelihood from survey data.
+  Our study is based on responses from Romanian couples, covering 54 aspects of a relationship, such as communication and compatibility. 
+  Our analysis involved several stages, including data preprocessing, correlation analysis, K-Means clustering, cross validation for feature selection, 
+  K-Nearest Neighbors (KNN) modeling, and sentiment analysis. A significant challenge was creating K-Means and KNN algorithms from the ground up, 
+  providing profound insights into algorithm mechanics and their application in the realm of human relationship analysis.
   " 
   mediaUrl="/images/divorce.png" 
   projectUrl="https://github.com/nickambrose7/Divorce-Predictor"
@@ -78,25 +80,23 @@ import Project from 'components/Project';
 ---
 <Project 
   title="Tiny File System" 
-  description="The Tiny File System (TFS) is a streamlined file system developed to handle essential file operations 
-  like create, read, write, and delete. Incorporating four primary block types – superblock, inode blocks, data blocks, and free blocks – 
-  TFS is structured around the use of linked lists for efficient management of free blocks, inodes, and file extents. The most challenging aspect 
-  of this project involved management of these linked lists and rigorous error checking, a critical requirement in file system development to 
-  ensure data integrity and system consistency. Additionally, I engineered a library functioning as a disk driver, utilizing a file to mimic actual 
-  disk storage. This project greatly enhanced my comprehesion of file system architecture, offering hands-on experience in the complexities 
-  of designing and maintaining a reliable and efficient file system." 
+  description="The Tiny File System (TFS) is a minimalist file system designed to execute fundamental file operations like creation, reading, writing, and deletion.
+   It integrates four main block types – superblock, inode blocks, data blocks, and free blocks – and efficiently manages them using linked lists. A key challenge
+    in this project was the complex management of these lists and ensuring rigorous error handling. I also developed a simulated disk driver library using a file 
+    to replicate disk storage. This project advanced my understanding of file system architecture, teaching me about the nuances of designing and 
+    maintaining a robust and efficient file system." 
   mediaUrl="/images/filesystem.png" 
   projectUrl="https://github.com/nickambrose7/Tiny-File-System"
 />
 ---
 <Project 
   title="Memory Simulator" 
-  description="The Memory Simulator, is a Python script designed to emulate the functionalities of a computer's memory system. This simulator
+  description="The Memory Simulator is a Python script designed to emulate the functionalities of a computer's memory system. This simulator
    translates logical memory addresses into physical addresses, while also replicating the operations of critical components such as the 
    Translation-Lookaside-Buffer (TLB), Page Table, Disk, and RAM. A focal point of the simulator is its tracking of page faults and TLB hits, 
-   allowing us to analize the effectivness of different page replacement algorithms. It incorporates three page replacement algorithms, including 
+   allowing us to analyze the effectiveness of different page replacement algorithms. It incorporates three page replacement algorithms:
    First In First Out (FIFO), Least Recently Used (LRU), and Optimal. This project provided me with an exploration into the 
-   dynamics of memory management, deepening my understanding of its intricate processes and the critical role it plays in computing systems. " 
+   dynamics of memory management, deepening my understanding of its intricate processes and the role it plays in computing systems." 
   mediaUrl="/images/memory.png" 
   projectUrl="https://github.com/nickambrose7/memory-simulator"
 />
