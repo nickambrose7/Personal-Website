@@ -25,43 +25,85 @@ hesitate to reach out!
 ## Personal Info
 import Image from 'next/image'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import { useState, useEffect } from 'react';
 
 export function PersonalInfo() {
+
+  // State to store the width of the window
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  // Effect to update the width of the window
+  useEffect(() => {
+    // Update the width on client side
+    setWindowWidth(window.innerWidth);
+
+    // Handle window resize
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Styles for mobile view
+  const mobileStyle = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '0 auto',
+    textAlign: 'center',
+  };
+
+  const iconStyle = {
+    fontSize: '1.5rem',
+    margin: '15px',
+  };
+
+  const contactInfoStyle = {
+    marginBottom: '20px',
+  };
+
   return (
-  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-    <div className="personal-info-container" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'left' }}>
-      <div className="contact-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-        <p style={{ marginBottom: '60px' }}><i className="bi bi-geo-alt-fill"></i> San Luis Obispo, CA</p>
-        <p style={{ marginBottom: '60px' }}><i className="bi bi-telephone-fill"></i> 602-350-8228</p>
-        <p style={{ marginBottom: '60px' }}><i className="bi bi-envelope-fill"></i> nickambrose7@gmail.com</p>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+      <div className="personal-info-container" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'left' }}>
+        <div className="contact-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+          <p style={windowWidth < 768 ? { ...contactInfoStyle, ...mobileStyle } : { marginBottom: '60px' }}>
+            <i className="bi bi-geo-alt-fill"></i> San Luis Obispo, CA
+          </p>
+          <p style={windowWidth < 768 ? { ...contactInfoStyle, ...mobileStyle } : { marginBottom: '60px' }}>
+            <i className="bi bi-telephone-fill"></i> 602-350-8228
+          </p>
+          <p style={windowWidth < 768 ? { ...contactInfoStyle, ...mobileStyle } : { marginBottom: '60px' }}>
+            <i className="bi bi-envelope-fill"></i> nickambrose7@gmail.com
+          </p>
+        </div>
       </div>
-    </div>
-    <div className="picture" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'right' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Image
-          src="/images/headShot.jpg"
-          alt="Nick Ambrose"
-          width={250}
-          height={400}
-          priority
-          className="next-image"
-        />
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '20px' }}>
-          <a href="https://www.linkedin.com/in/nick-ambrose-70a5101ba/" target="_blank">
-            <i className="bi bi-linkedin" style={{ fontSize: '2rem', marginBottom: '10px', margin: "30px" }}></i>
-          </a>
-          <a href="https://github.com/nickambrose7" target="_blank">
-            <i className="bi bi-github" style={{ fontSize: '2rem', margin: "30px" }}></i>
-          </a>
-          <a href="/files/resume.pdf" target="_blank">
-            <i className="bi bi-file-earmark-person" style={{ fontSize: '2rem', margin: "30px" }}></i>
-          </a>
+      <div className="picture" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'right' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Image
+            src="/images/headShot.jpg"
+            alt="Nick Ambrose"
+            width={250}
+            height={400}
+            priority
+            className="next-image"
+          />
+          <div style={windowWidth < 768 ? mobileStyle : { display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '20px' }}>
+            <a href="https://www.linkedin.com/in/nick-ambrose-70a5101ba/" target="_blank">
+              <i className="bi bi-linkedin" style={windowWidth < 768 ? iconStyle : { fontSize: '2rem', margin: '30px' }}></i>
+            </a>
+            <a href="https://github.com/nickambrose7" target="_blank">
+              <i className="bi bi-github" style={windowWidth < 768 ? iconStyle : { fontSize: '2rem', margin: '30px' }}></i>
+            </a>
+            <a href="/files/resume.pdf" target="_blank">
+              <i className="bi bi-file-earmark-person" style={windowWidth < 768 ? iconStyle : { fontSize: '2rem', margin: '30px' }}></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   );
 }
+
 
 <PersonalInfo />
 
