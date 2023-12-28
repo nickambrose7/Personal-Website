@@ -1,34 +1,43 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
 
-// Create a local dark theme instance
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
 });
 
-export default function Project({ title, description, mediaUrl, projectUrl}) {
-  // Determine if the mediaUrl is a video or an image
+export default function Project({ title, description, mediaUrl, projectUrl }) {
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const isVideo = mediaUrl && mediaUrl.endsWith('.mp4');
+  const shouldAutoplay = windowWidth > 768; // Autoplay only on larger screens
 
   return (
     <ThemeProvider theme={darkTheme}>
       <Card sx={{ maxWidth: 1200 }}>
         {isVideo ? (
           <video
-            style={{ height: 400, width: '100%', objectFit: 'cover', objectPosition: '50% 50', marginTop: '0px' }}
+            style={{ width: '100%', height: windowWidth < 768 ? 200 : 400, objectFit: 'cover', marginTop: '0px' }}
             src={mediaUrl}
             title={title}
             loop
             muted
-            autoPlay
+            autoPlay={shouldAutoplay}
           />
         ) : (
           <CardMedia
             sx={{
-              height: 450,
+              height: windowWidth < 768 ? 200 : 450, // Adjust height based on screen width
               transition: 'transform 0.3s ease-in-out',
               '&:hover': { transform: 'scale(1.05)' },
               objectFit: 'contain',
@@ -53,7 +62,5 @@ export default function Project({ title, description, mediaUrl, projectUrl}) {
     </ThemeProvider>
   );
 }
-
-
 
 
