@@ -1,8 +1,8 @@
 ---
 title: A Deep Dive Into my Skills
 date: 2023/12/21
-description: Learn more about how I aquired  my skills.
-tag: personal
+description: Learn more about how I aquired my skills.
+tag: professional
 author: Nick Ambrose
 ---
 
