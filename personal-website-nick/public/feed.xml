@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title><![CDATA[Nick Ambrose]]></title>
-        <description><![CDATA[Nick Ambrose's posts]]></description>
-        <link>https://nickambrose.com/</link>
+        <description><![CDATA[Nick Ambrose]]></description>
+        <link>https://nickambrose.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 03 Jan 2024 01:09:55 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Jan 2024 22:44:14 GMT</lastBuildDate>
         <atom:link href="https://nickambrose.com/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[My Skills]]></title>
-            <description><![CDATA[Learn more about my skills.]]></description>
-            <link>/posts/api-routes</link>
+            <title><![CDATA[A Deep Dive Into my Skills]]></title>
+            <description><![CDATA[Learn more about how I aquired my skills.]]></description>
+            <link>/posts/skills</link>
             <guid isPermaLink="true">/posts/skills</guid>
-            <category><![CDATA[personal]]></category>
-            <dc:creator><![CDATA[You]]></dc:creator>
-            <pubDate>Thu, 21 Dec 2023 07:00:00 GMT</pubDate>
+            <category><![CDATA[professional]]></category>
+            <dc:creator><![CDATA[Nick Ambrose]]></dc:creator>
+            <pubDate>Thu, 21 Dec 2023 08:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
