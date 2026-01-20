@@ -1,6 +1,6 @@
 # Portfolio Starter Kit
 
-This portfolio is built with **Next.js** and a library called [Nextra](https://nextra.vercel.app/). It allows you to write Markdown and focus on the _content_ of your portfolio. This starter includes:
+This portfolio is built with **Next.js** and a library called [Nextra](https://nextra.vercel.app/). Things included:
 
 - Automatically configured to handle Markdown/MDX
 - Generates an RSS feed based on your posts
@@ -16,6 +16,11 @@ https://demo.vercel.blog
 1. Update your name and site URL for the RSS feed in `scripts/gen-rss.js`.
 1. Update the meta tags in `pages/_document.tsx`.
 1. Update the posts inside `pages/posts/*.md` with your own content.
+
+## Run in Development
+```bash
+npm run dev
+```
 
 ## Deploy your own
 
