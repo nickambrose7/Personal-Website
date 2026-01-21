@@ -1,98 +1,70 @@
 ---
 type: page
 title: Home
-date: 2023-12-21
+date: 2023-12-22
 ---
 
 ## About Me
 
-Hello, and thanks for stopping by my website! My name is Nick Ambrose, and I'm a senior Computer Science student at Cal Poly, San Luis Obispo.
-During my academic journey at Cal Poly, coupled with hands-on professional experience, I've honed my skills as a full-stack developer, 
-immersing myself in a diverse array of technologies. Curious about my projects and skills? Take a peek at my [resume](/files/resume.pdf), 
-browse my [GitHub](https://github.com/nickambrose7), or connect with me on [LinkedIn](https://www.linkedin.com/in/nick-ambrose-70a5101ba/) 
-for a deeper dive into my professional world! 
+Hello — I'm Nick Ambrose, a software engineer at Moebius Solutions. I build backend-heavy web applications in Python, with a focus on secure systems, databases, and developer tooling. Most recently, I've worked on a U.S. Navy document/workflow management application (Flask, SQLAlchemy, PostgreSQL), where I've owned large database migrations, worked on reusable internal frameworks, and implemented security-focused features like certificate-based authentication and access control.
 
-When I'm not in front of 
-a computer screen, you might find me hiking through nature's wonders, perfecting my swing on the golf course, rolling on the mats practicing Jiu-Jitsu, 
-or traveling to new and exciting destinations. I'm eagerly counting down to June 2024, when I'll graduate and embark on the next big adventure as a software engineer. 
-I'm actively exploring opportunities where I can contribute, grow, and make a tangible impact. If you're interested in chatting, brainstorming, or just saying hi, don't
-hesitate to reach out!
+I studied Computer Science at Cal Poly, San Luis Obispo. If you want the full details, you can check out my   , browse my [GitHub](https://github.com/nickambrose7), or connect with me on [LinkedIn](https://www.linkedin.com/in/nick-ambrose-70a5101ba/).
 
-
+Outside of work, I'm usually surfing, golfing, hiking, or planning the next trip. I'm always open to connecting with thoughtful engineers and teams. Feel free to reach out if you'd like to chat!
 
 
 ---
 ## Personal Info
 import Image from 'next/image'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import { useState, useEffect } from 'react';
 
 export function PersonalInfo() {
-
-  // State to store the width of the window
-  const [windowWidth, setWindowWidth] = useState(null);
-
-  // Effect to update the width of the window
-  useEffect(() => {
-    // Update the width on client side
-    setWindowWidth(window.innerWidth);
-
-    // Handle window resize
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup listener
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Styles for mobile view
-  const mobileStyle = {
-    flexDirection: 'column',
-    alignItems: 'left',
-    margin: '0 auto',
-    textAlign: 'left',
-  };
-
-  const iconStyle = {
-    fontSize: '1.5rem',
-    margin: '15px',
-  };
-
-  const contactInfoStyle = {
-    marginBottom: '20px',
-  };
-
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-      <div className="personal-info-container" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'left' }}>
-        <div className="contact-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-          <p style={windowWidth < 768 ? { ...contactInfoStyle, ...mobileStyle } : { marginBottom: '60px' }}>
-            <i className="bi bi-geo-alt-fill"></i> San Luis Obispo, CA
+    <div className="personal-info">
+      <div className="personal-info-container">
+        <div className="contact-info">
+          <p className="location">
+            <i className="bi bi-geo-alt-fill"></i> <span>San Diego, CA</span>
           </p>
-          
+          <div className="social-links">
+            <a
+              className="social-link"
+              href="https://www.linkedin.com/in/nick-ambrose-70a5101ba/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="bi bi-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              className="social-link"
+              href="https://github.com/nickambrose7"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="bi bi-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a
+              className="social-link"
+              href="/files/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="bi bi-file-earmark-person"></i>
+              <span>Resume</span>
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="picture" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'right' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="profile-media">
           <Image
-            src="/images/headShot.jpg"
+            src="/images/headShot2024.JPG"
             alt="Nick Ambrose"
             width={225}
             height={325}
             priority
-            className="next-image"
+            className="next-image profile-image"
           />
-          <div style={windowWidth < 768 ? mobileStyle : { display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '20px' }}>
-            <a href="https://www.linkedin.com/in/nick-ambrose-70a5101ba/" target="_blank">
-              <i className="bi bi-linkedin" style={windowWidth < 768 ? iconStyle : { fontSize: '2rem', margin: '30px' }}></i>
-            </a>
-            <a href="https://github.com/nickambrose7" target="_blank">
-              <i className="bi bi-github" style={windowWidth < 768 ? iconStyle : { fontSize: '2rem', margin: '30px' }}></i>
-            </a>
-            <a href="/files/resume.pdf" target="_blank">
-              <i className="bi bi-file-earmark-person" style={windowWidth < 768 ? iconStyle : { fontSize: '2rem', margin: '30px' }}></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>
