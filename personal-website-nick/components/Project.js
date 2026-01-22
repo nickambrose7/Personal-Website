@@ -46,14 +46,17 @@ export default function Project({ title, description, mediaUrl, projectUrl}) {
             {description}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small" href={projectUrl} target="_blank">Learn More</Button>
-        </CardActions>
+        {projectUrl ? (
+          <CardActions>
+            <Button size="small" href={projectUrl} target="_blank" rel="noreferrer">
+              Learn More
+            </Button>
+          </CardActions>
+        ) : null}
       </Card>
     </ThemeProvider>
   );
 }
-
 
 
 

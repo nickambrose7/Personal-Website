@@ -14,9 +14,19 @@ import Project from '../components/Project.js';
   It allows users to convert texts into various tones like professional, friendly, or humorous, and offers translation into nine languages. 
   A key feature is its smart voice texting, which lets users dictate messages, transforming them into well-structured texts with perfect grammar in any chosen tone. 
   Additionally, it offers personalization options through a companion app outside of iMessage.
-  Without any dedicated marketing efforts, Better Texter has organically garnered attention and surpassed 100 downloads on the App Store, highlighting its potential and user interest." 
+  Without any dedicated marketing efforts, Better Texter has organically garnered attention and surpassed 200 downloads on the App Store, highlighting its potential and user interest." 
   mediaUrl="/images/BetterTexterwebsitemv.mp4" 
-  projectUrl="https://apps.apple.com/us/app/better-texter/id6451396342"
+/>
+---
+<Project 
+  title="Automated Tee Time Booking System" 
+  description="This automated tee time booking system is a serverless automation platform built on AWS to run time-critical booking workflows reliably across multiple golf course sites. 
+  The system uses a central “orchestrator” Lambda that selects and dispatches course-specific worker Lambdas, allowing booking attempts to run in parallel when needed. All infrastructure is
+  defined with AWS SAM, with EventBridge providing time zone–aware scheduling and AWS Secrets Manager handling credential storage.
+  
+  Each worker implements a resilient booking flow with secure session handling (including JWT-style sessions where applicable), retry logic, and bounded execution designed for serverless constraints.
+  The project also includes environment-specific deployments (staging and production) and unit/integration test scaffolding to validate Lambda behavior and external API interactions." 
+  mediaUrl="/images/TeeTimeBooking.png" 
 />
 ---
 <Project 
