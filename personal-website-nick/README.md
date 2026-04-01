@@ -22,6 +22,34 @@ https://demo.vercel.blog
 npm run dev
 ```
 
+## Blog comments setup
+
+This project now includes a first-party comments system built with:
+
+- Next.js App Router route handlers
+- Neon Postgres
+- A lightweight password-protected admin page at `/admin/comments`
+
+### 1. Create your environment file
+
+Copy `.env.example` to `.env.local` and set:
+
+- `DATABASE_URL`
+- `COMMENTS_COOKIE_SECRET`
+- `COMMENTS_ADMIN_PASSWORD` or `COMMENTS_ADMIN_PASSWORD_HASH`
+
+### 2. Apply the schema in Neon
+
+Run the SQL in `db/schema.sql` against your Neon database.
+
+### 3. Start the app
+
+```bash
+npm run dev
+```
+
+Public comments will appear on `/posts/*` pages. The admin UI lives at `/admin/comments`.
+
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog)

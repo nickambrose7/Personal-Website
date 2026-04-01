@@ -163,3 +163,247 @@ img.next-image {
   display: flex;
   justify-content: space-between;  
 }
+
+.comments-shell,
+.admin-comments-page {
+  margin-top: 4rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  padding-top: 2.5rem;
+}
+
+.comments-header,
+.admin-comments-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.comments-header h2,
+.admin-comments-page h1 {
+  margin-bottom: 0.4rem;
+}
+
+.comments-header p,
+.admin-comments-page p {
+  color: #526074;
+}
+
+.comments-form,
+.admin-login-form,
+.admin-comment-card {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.98));
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.comments-form,
+.admin-login-form {
+  padding: 1.25rem;
+}
+
+.comments-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.comments-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.comments-field span {
+  font-size: 0.95rem;
+  font-variation-settings: 'wght' 650;
+}
+
+.comments-field input,
+.comments-field textarea {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: inherit;
+}
+
+.comments-field input:focus,
+.comments-field textarea:focus {
+  outline: 2px solid rgba(0, 116, 222, 0.2);
+  border-color: #0074de;
+}
+
+.comments-actions,
+.admin-comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.comments-shell button,
+.admin-comments-page button {
+  border: 0;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.75rem 1.15rem;
+  font: inherit;
+  font-variation-settings: 'wght' 650;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.comments-shell button:hover,
+.admin-comments-page button:hover {
+  transform: translateY(-1px);
+}
+
+.comments-shell button:disabled,
+.admin-comments-page button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.comments-list,
+.admin-comments-list,
+.comment-replies {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comments-list,
+.admin-comments-list {
+  margin-top: 1.5rem;
+}
+
+.comment-card,
+.admin-comment-card {
+  padding: 1.1rem 1.2rem;
+}
+
+.comment-card {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 18px;
+  background: rgba(248, 250, 252, 0.58);
+}
+
+.comment-replies {
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+}
+
+.comment-reply {
+  background: rgba(224, 242, 254, 0.35);
+}
+
+.comment-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.comment-meta strong {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.comment-meta time,
+.admin-comment-post,
+.admin-comment-email {
+  color: #526074;
+  font-size: 0.92rem;
+}
+
+.admin-comment-email {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.comment-body {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.comment-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(0, 116, 222, 0.12);
+  color: #0052a3;
+  padding: 0.16rem 0.55rem;
+  font-size: 0.78rem;
+  font-variation-settings: 'wght' 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.comments-error,
+.comments-success {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.comments-error {
+  color: #b42318;
+}
+
+.comments-success {
+  color: #067647;
+}
+
+@media (prefers-color-scheme: dark) {
+  .comments-form,
+  .admin-login-form,
+  .admin-comment-card,
+  .comment-card {
+    background: rgba(15, 23, 42, 0.72);
+    border-color: rgba(148, 163, 184, 0.2);
+    box-shadow: none;
+  }
+
+  .comment-reply {
+    background: rgba(3, 105, 161, 0.22);
+  }
+
+  .comments-field input,
+  .comments-field textarea {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(148, 163, 184, 0.25);
+  }
+
+  .comments-header p,
+  .admin-comments-page p,
+  .comment-meta time,
+  .admin-comment-post,
+  .admin-comment-email {
+    color: #a5b4c7;
+  }
+
+  .comment-badge {
+    color: #7dd3fc;
+    background: rgba(125, 211, 252, 0.12);
+  }
+}
+
+@media (max-width: 768px) {
+  .comments-form-grid,
+  .comments-header,
+  .admin-comments-header,
+  .comment-meta {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .comment-replies {
+    margin-left: 0.75rem;
+  }
+}
