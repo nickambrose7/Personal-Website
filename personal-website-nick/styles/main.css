@@ -166,8 +166,42 @@ img.next-image {
 
 .comments-shell,
 .admin-comments-page {
+  --comments-surface: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 94%,
+    var(--x-color-primary-100) 6%
+  );
+  --comments-surface-strong: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 88%,
+    var(--x-color-primary-100) 12%
+  );
+  --comments-surface-accent: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 84%,
+    var(--x-color-primary-500) 16%
+  );
+  --comments-border: color-mix(
+    in srgb,
+    var(--x-color-primary-500) 24%,
+    transparent
+  );
+  --comments-border-strong: color-mix(
+    in srgb,
+    var(--x-color-primary-600) 34%,
+    transparent
+  );
+  --comments-muted: color-mix(in srgb, currentColor 62%, transparent);
+  --comments-button-bg: var(--x-color-primary-600);
+  --comments-button-bg-hover: var(--x-color-primary-800);
+  --comments-button-text: #fff;
+  --comments-button-shadow: color-mix(
+    in srgb,
+    var(--x-color-primary-800) 18%,
+    transparent
+  );
   margin-top: 4rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  border-top: 1px solid var(--comments-border);
   padding-top: 2.5rem;
 }
 
@@ -187,16 +221,20 @@ img.next-image {
 
 .comments-header p,
 .admin-comments-page p {
-  color: #526074;
+  color: var(--comments-muted);
 }
 
 .comments-form,
 .admin-login-form,
 .admin-comment-card {
-  border: 1px solid rgba(148, 163, 184, 0.35);
+  border: 1px solid var(--comments-border);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.98));
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  background: linear-gradient(
+    180deg,
+    var(--comments-surface),
+    var(--comments-surface-strong)
+  );
+  box-shadow: 0 18px 50px color-mix(in srgb, currentColor 10%, transparent);
 }
 
 .comments-form,
@@ -225,18 +263,20 @@ img.next-image {
 .comments-field input,
 .comments-field textarea {
   width: 100%;
-  border: 1px solid rgba(148, 163, 184, 0.45);
+  border: 1px solid var(--comments-border);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--comments-surface);
   padding: 0.9rem 1rem;
   font: inherit;
   color: inherit;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, white 18%, transparent);
 }
 
 .comments-field input:focus,
 .comments-field textarea:focus {
-  outline: 2px solid rgba(0, 116, 222, 0.2);
-  border-color: #0074de;
+  outline: 2px solid color-mix(in srgb, var(--x-color-primary-500) 26%, transparent);
+  outline-offset: 1px;
+  border-color: var(--x-color-primary-600);
 }
 
 .comments-actions,
@@ -248,26 +288,40 @@ img.next-image {
 
 .comments-shell button,
 .admin-comments-page button {
-  border: 0;
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--comments-button-bg) 58%, transparent);
   border-radius: 999px;
-  background: #0f172a;
-  color: #fff;
+  background: var(--comments-button-bg);
+  color: var(--comments-button-text);
   padding: 0.75rem 1.15rem;
   font: inherit;
   font-variation-settings: 'wght' 650;
+  line-height: 1.1;
   cursor: pointer;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 10px 24px var(--comments-button-shadow);
+  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .comments-shell button:hover,
 .admin-comments-page button:hover {
+  background: var(--comments-button-bg-hover);
+  border-color: color-mix(in srgb, var(--comments-button-bg-hover) 68%, transparent);
   transform: translateY(-1px);
+}
+
+.comments-shell button:focus-visible,
+.admin-comments-page button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--x-color-primary-500) 30%, transparent);
+  outline-offset: 2px;
 }
 
 .comments-shell button:disabled,
 .admin-comments-page button:disabled {
   cursor: wait;
   opacity: 0.7;
+  transform: none;
+  box-shadow: none;
 }
 
 .comments-list,
@@ -289,9 +343,9 @@ img.next-image {
 }
 
 .comment-card {
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  border: 1px solid var(--comments-border);
   border-radius: 18px;
-  background: rgba(248, 250, 252, 0.58);
+  background: var(--comments-surface);
 }
 
 .comment-replies {
@@ -300,7 +354,8 @@ img.next-image {
 }
 
 .comment-reply {
-  background: rgba(224, 242, 254, 0.35);
+  background: var(--comments-surface-accent);
+  border-color: var(--comments-border-strong);
 }
 
 .comment-meta {
@@ -319,7 +374,7 @@ img.next-image {
 .comment-meta time,
 .admin-comment-post,
 .admin-comment-email {
-  color: #526074;
+  color: var(--comments-muted);
   font-size: 0.92rem;
 }
 
@@ -337,8 +392,8 @@ img.next-image {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  background: rgba(0, 116, 222, 0.12);
-  color: #0052a3;
+  background: color-mix(in srgb, var(--x-color-primary-500) 14%, transparent);
+  color: var(--x-color-primary-800);
   padding: 0.16rem 0.55rem;
   font-size: 0.78rem;
   font-variation-settings: 'wght' 700;
@@ -358,40 +413,6 @@ img.next-image {
 
 .comments-success {
   color: #067647;
-}
-
-@media (prefers-color-scheme: dark) {
-  .comments-form,
-  .admin-login-form,
-  .admin-comment-card,
-  .comment-card {
-    background: rgba(15, 23, 42, 0.72);
-    border-color: rgba(148, 163, 184, 0.2);
-    box-shadow: none;
-  }
-
-  .comment-reply {
-    background: rgba(3, 105, 161, 0.22);
-  }
-
-  .comments-field input,
-  .comments-field textarea {
-    background: rgba(15, 23, 42, 0.9);
-    border-color: rgba(148, 163, 184, 0.25);
-  }
-
-  .comments-header p,
-  .admin-comments-page p,
-  .comment-meta time,
-  .admin-comment-post,
-  .admin-comment-email {
-    color: #a5b4c7;
-  }
-
-  .comment-badge {
-    color: #7dd3fc;
-    background: rgba(125, 211, 252, 0.12);
-  }
 }
 
 @media (max-width: 768px) {
