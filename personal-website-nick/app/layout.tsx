@@ -78,8 +78,10 @@ export default async function RootLayout({
           </Navbar>
           {children}
           <Footer>
-            <small>
-              <time>{new Date().getFullYear()}</time> © Nicholas Ambrose.
+            <small className="footer">
+              <span>
+                <time>{new Date().getFullYear()}</time> © Nicholas Ambrose.
+              </span>
               <a href="/feed.xml">RSS</a>
             </small>
           </Footer>

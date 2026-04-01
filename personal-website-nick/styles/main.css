@@ -158,3 +158,8 @@ img.next-image {
     margin-left: 0;
   }
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;  
+}
