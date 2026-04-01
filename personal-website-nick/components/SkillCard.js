@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Card, CardContent, Typography } from '@mui/material';
@@ -41,6 +43,5 @@ export default function SkillCard({ skillName, iconName, iconLibrary }) {
     </ThemeProvider>
   );
 }
-
 
 

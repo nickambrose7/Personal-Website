@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@mui/material';
@@ -57,6 +59,5 @@ export default function Project({ title, description, mediaUrl, projectUrl}) {
     </ThemeProvider>
   );
 }
-
 
 
