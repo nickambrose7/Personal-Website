@@ -161,7 +161,295 @@ img.next-image {
 
 .footer {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+}
+
+.footer-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lead-trigger {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--x-color-primary-600) 46%, transparent);
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--x-color-primary-500) 16%, var(--x-color-nextra-bg)),
+    color-mix(in srgb, var(--x-color-primary-700) 14%, var(--x-color-nextra-bg))
+  );
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-variation-settings: 'wght' 700;
+  padding: 0.75rem 1.1rem;
+  transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease,
+    box-shadow 0.15s ease;
+  box-shadow: 0 16px 36px color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.lead-trigger:hover,
+.lead-trigger:focus-visible {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--x-color-primary-700) 60%, transparent);
+}
+
+.lead-trigger:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--x-color-primary-500) 30%, transparent);
+  outline-offset: 2px;
+}
+
+.lead-trigger-primary {
+  align-self: flex-start;
+}
+
+.lead-trigger-inline {
+  padding: 0.45rem 0.8rem;
+  font-size: 0.92rem;
+}
+
+.lead-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: color-mix(in srgb, #020617 45%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.lead-modal {
+  --lead-surface: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 92%,
+    var(--x-color-primary-100) 8%
+  );
+  --lead-surface-strong: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 84%,
+    var(--x-color-primary-100) 16%
+  );
+  --lead-border: color-mix(
+    in srgb,
+    var(--x-color-primary-500) 26%,
+    transparent
+  );
+  --lead-field-surface: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 72%,
+    var(--x-color-primary-100) 28%
+  );
+  --lead-field-border: color-mix(
+    in srgb,
+    currentColor 18%,
+    transparent
+  );
+  --lead-field-border-strong: color-mix(
+    in srgb,
+    var(--x-color-primary-600) 48%,
+    transparent
+  );
+  --lead-field-shadow: inset 0 1px 0 color-mix(in srgb, white 28%, transparent);
+  width: min(100%, 44rem);
+  max-height: min(90vh, 52rem);
+  overflow: auto;
+  border: 1px solid var(--lead-border);
+  border-radius: 24px;
+  background: linear-gradient(180deg, var(--lead-surface), var(--lead-surface-strong));
+  box-shadow: 0 28px 80px color-mix(in srgb, currentColor 18%, transparent);
+  padding: 1.4rem;
+}
+
+.lead-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.lead-modal-header h2 {
+  margin: 0 0 0.35rem;
+}
+
+.lead-modal-copy,
+.lead-modal-eyebrow {
+  margin: 0;
+}
+
+.lead-modal-eyebrow {
+  color: var(--x-color-primary-700);
+  font-size: 0.82rem;
+  font-variation-settings: 'wght' 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead-modal-copy {
+  color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+.lead-modal-close {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--x-color-nextra-bg) 84%, transparent);
+  color: inherit;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.45rem 0.8rem;
+}
+
+.lead-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-form .comments-field {
+  margin-bottom: 1.1rem;
+}
+
+.lead-form .comments-field span {
+  color: color-mix(in srgb, currentColor 92%, transparent);
+}
+
+.lead-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.lead-form .comments-field input,
+.lead-form .comments-field textarea {
+  border-color: var(--lead-field-border);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--lead-field-surface) 92%, white 8%),
+    var(--lead-field-surface)
+  );
+  box-shadow: var(--lead-field-shadow);
+  color: inherit;
+}
+
+.lead-form .comments-field input::placeholder,
+.lead-form .comments-field textarea::placeholder {
+  color: color-mix(in srgb, currentColor 42%, transparent);
+}
+
+.lead-form .comments-field input:hover,
+.lead-form .comments-field textarea:hover {
+  border-color: color-mix(in srgb, currentColor 26%, transparent);
+}
+
+.lead-form .comments-field input:focus,
+.lead-form .comments-field textarea:focus {
+  border-color: var(--lead-field-border-strong);
+  background: color-mix(in srgb, var(--lead-field-surface) 86%, white 14%);
+  box-shadow:
+    var(--lead-field-shadow),
+    0 0 0 4px color-mix(in srgb, var(--x-color-primary-500) 14%, transparent);
+}
+
+.lead-form .comments-actions {
+  margin-top: 0.5rem;
+}
+
+.lead-form .comments-actions button {
+  min-width: 10rem;
+}
+
+.lead-form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.65rem;
+}
+
+.lead-modal .lead-form-submit {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--x-color-primary-700) 52%, transparent) !important;
+  border-radius: 999px;
+  background-color: var(--x-color-primary-600) !important;
+  background-image: linear-gradient(
+    180deg,
+    var(--x-color-primary-500),
+    var(--x-color-primary-700)
+  ) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-variation-settings: 'wght' 700;
+  line-height: 1.1;
+  min-width: 10rem;
+  min-height: 3rem;
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow:
+    0 14px 30px color-mix(in srgb, var(--x-color-primary-900) 24%, transparent),
+    inset 0 1px 0 color-mix(in srgb, white 22%, transparent) !important;
+  transition: transform 0.15s ease, opacity 0.15s ease, background-image 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lead-modal .lead-form-submit:hover {
+  transform: translateY(-1px);
+  background-color: var(--x-color-primary-700) !important;
+  background-image: linear-gradient(
+    180deg,
+    var(--x-color-primary-600),
+    var(--x-color-primary-800)
+  ) !important;
+  border-color: color-mix(in srgb, var(--x-color-primary-800) 70%, transparent);
+}
+
+.lead-modal .lead-form-submit:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--x-color-primary-500) 32%, transparent);
+  outline-offset: 3px;
+}
+
+.lead-modal .lead-form-submit:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
+}
+
+.lead-form-feedback {
+  margin: 0.9rem 0 0;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  line-height: 1.5;
+}
+
+.lead-form-feedback-success {
+  border-color: color-mix(in srgb, #12b76a 28%, transparent);
+  background: color-mix(in srgb, #12b76a 14%, transparent);
+  color: color-mix(in srgb, #027a48 82%, currentColor);
+}
+
+.lead-form-feedback-error {
+  border-color: color-mix(in srgb, #f04438 30%, transparent);
+  background: color-mix(in srgb, #f04438 12%, transparent);
+  color: color-mix(in srgb, #b42318 82%, currentColor);
+}
+
+.lead-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .comments-shell,
@@ -416,12 +704,32 @@ img.next-image {
 }
 
 @media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer-actions,
+  .lead-form-grid {
+    width: 100%;
+  }
+
+  .footer-actions {
+    justify-content: space-between;
+  }
+
+  .lead-form-grid,
   .comments-form-grid,
   .comments-header,
   .admin-comments-header,
   .comment-meta {
     grid-template-columns: 1fr;
     flex-direction: column;
+  }
+
+  .lead-modal {
+    padding: 1rem;
   }
 
   .comment-replies {

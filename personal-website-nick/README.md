@@ -42,6 +42,20 @@ Copy `.env.example` to `.env.local` and set:
 
 Run the SQL in `db/schema.sql` against your Neon database.
 
+## Work inquiry leads setup
+
+This project also includes a reusable lead-capture modal for work inquiries.
+
+Set these environment variables before using it:
+
+- `MAILERSEND_API_KEY`
+- `LEADS_NOTIFICATION_TO_EMAIL`
+- `LEADS_NOTIFICATION_FROM_EMAIL`
+- `LEADS_NOTIFICATION_FROM_NAME`
+- Optional: `LEADS_HASH_SECRET`
+
+Lead submissions are stored in the `lead_submissions` table created by `db/schema.sql`.
+
 ### 3. Start the app
 
 ```bash

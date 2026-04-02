@@ -5,6 +5,7 @@ import { getPageMap } from 'nextra/page-map'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'nextra-theme-blog/style.css'
 import '../styles/main.css'
+import { LeadCaptureTrigger } from '../components/leads/lead-capture-trigger'
 
 const title = "Nick's Portfolio"
 const description =
@@ -74,6 +75,11 @@ export default async function RootLayout({
       <body>
         <Layout>
           <Navbar pageMap={await getPageMap()}>
+            <LeadCaptureTrigger
+              label="Work with me"
+              sourceLabel="navbar-cta"
+              className="lead-trigger-inline"
+            />
             <ThemeSwitch />
           </Navbar>
           {children}
@@ -82,7 +88,9 @@ export default async function RootLayout({
               <span>
                 <time>{new Date().getFullYear()}</time> © Nicholas Ambrose.
               </span>
-              <a href="/feed.xml">RSS</a>
+              <span className="footer-actions">
+                <a href="/feed.xml">RSS</a>
+              </span>
             </small>
           </Footer>
         </Layout>
