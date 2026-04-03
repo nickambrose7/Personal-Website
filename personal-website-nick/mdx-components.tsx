@@ -1,6 +1,20 @@
 import { useMDXComponents as getBlogMDXComponents } from 'nextra-theme-blog'
 import { CommentsSection } from './components/comments/comments-section'
 
+function DateFormatter({ date }: { date: Date }) {
+  return (
+    <>
+      Last updated{' '}
+      {date.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'UTC',
+      })}
+    </>
+  )
+}
+
 function getPostPath(mdxPath?: string[]) {
   if (!mdxPath || mdxPath[0] !== 'posts' || mdxPath.length < 2) {
     return null
@@ -10,7 +24,10 @@ function getPostPath(mdxPath?: string[]) {
 }
 
 export function useMDXComponents(components: any = {}) {
-  const blogComponents = getBlogMDXComponents(components) as any
+  const blogComponents = getBlogMDXComponents({
+    DateFormatter,
+    ...components,
+  }) as any
   const BlogWrapper = blogComponents.wrapper as any
 
   return {
