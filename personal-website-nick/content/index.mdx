@@ -3,17 +3,22 @@ type: page
 title: Home
 ---
 
-Hello, I'm Nick Ambrose, a software engineer at Moebius Solutions. I build backend-heavy web applications in Python, with a focus on secure systems, databases, and developer tooling. Most recently, I've worked on a U.S. Navy document/workflow management application (Flask, SQLAlchemy, PostgreSQL), where I've owned large database migrations, contributed to reusable internal frameworks, and implemented security-focused features like certificate-based authentication and access control. I also hold an active U.S. DoD Secret clearance.
+import Image from "next/image";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-I studied Computer Science at Cal Poly, San Luis Obispo. If you want the full details, you can check out my [resume](/files/resume.pdf), browse my [GitHub](https://github.com/nickambrose7), or connect with me on [LinkedIn](https://www.linkedin.com/in/nick-ambrose-70a5101ba/).
+Hi, I'm Nick. I'm a software engineer based in San Diego, building secure, backend-heavy web applications.
 
-Outside of work, I'm usually surfing, golfing, hiking, or planning the next trip. I'm always open to connecting with thoughtful engineers and teams. Feel free to reach out if you'd like to chat!
+I currently work at Moebius Solutions, where I’m a core developer on HARPs, a document and workflow management platform for the U.S. Navy. My work has included leading a 10 million record migration to PostgreSQL, building an Excel import/export framework for bulk data workflows, and improving delivery speed through reusable Flask/SQLAlchemy tooling. I also hold an active U.S. DoD Secret clearance.
 
+One of my strengths is that I can work across a lot of different areas, including backend systems, databases, internal tools, and AI-assisted workflows. I bring a strong security mindset shaped by regulated government work, and I'm especially effective where teams need someone who can ship quickly, reduce operational risk, and keep maintainability and security from becoming tradeoffs.
+
+This site is organized for hiring teams and prospective clients who want a fast view of my background. Start with the [projects](/projects) page for implementation examples, review the [skills](/skills) page for my current stack, or open the [resume](/files/resume.pdf) for a concise summary.
+
+I'm open to discussing software engineering roles, contract work, and freelance engagements. Thanks for stopping by my website!
 
 ---
-## Personal Info
-import Image from 'next/image'
-import 'bootstrap-icons/font/bootstrap-icons.css'
+
+## Contact
 
 export function PersonalInfo() {
   return (
@@ -57,10 +62,9 @@ export function PersonalInfo() {
           <Image
             src="/images/Headshot2024.JPG"
             alt="Nick Ambrose"
-            width={225}
-            height={325}
+            width={240}
+            height={240}
             priority
-            style={{ height: 'auto' }}
             className="next-image profile-image"
           />
         </div>
@@ -68,7 +72,6 @@ export function PersonalInfo() {
     </div>
   );
 }
-
 
 <PersonalInfo />
 

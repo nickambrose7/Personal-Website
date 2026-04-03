@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
-import { Footer, Layout, Navbar, ThemeSwitch } from 'nextra-theme-blog'
+import { Footer, Layout } from 'nextra-theme-blog'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
+import { normalizePages } from 'nextra/normalize-pages'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'nextra-theme-blog/style.css'
 import '../styles/main.css'
-import { LeadCaptureTrigger } from '../components/leads/lead-capture-trigger'
+import { SiteHeader } from '../components/site-header'
 
-const title = "Nick's Portfolio"
+const title = 'Nick Ambrose | Software Engineer'
 const description =
-  "Nick's portfolio website, all you need to know about him!"
+  'Portfolio, projects, and resume for Nick Ambrose, a software engineer focused on backend systems, databases, and dependable product delivery.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nickambrose.com'),
@@ -57,6 +58,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const pageMap = await getPageMap()
+  const { topLevelNavbarItems } = normalizePages({
+    list: pageMap,
+    route: '/',
+  })
+  const navItems = topLevelNavbarItems.flatMap((item) =>
+    item.route && item.title ? [{ route: item.route, title: item.title }] : []
+  )
+
   return (
     <html lang="en" suppressHydrationWarning>
       <Head backgroundColor={{ dark: '#0f172a', light: '#ffffff' }}>
@@ -74,14 +84,7 @@ export default async function RootLayout({
       </Head>
       <body>
         <Layout>
-          <Navbar pageMap={await getPageMap()}>
-            <LeadCaptureTrigger
-              label="Work with me"
-              sourceLabel="navbar-cta"
-              className="lead-trigger-inline"
-            />
-            <ThemeSwitch />
-          </Navbar>
+          <SiteHeader navItems={navItems} />
           {children}
           <Footer>
             <small className="footer">

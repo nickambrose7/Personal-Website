@@ -4,108 +4,69 @@ title: Projects
 date: 2023-12-20
 ---
 
-## Highlights of My Software Engineering Work 
+## Selected Work
+
+The projects below show a mix of product development, backend automation, systems programming, and academic engineering work. Together they reflect how Nick approaches shipping practical software, learning unfamiliar domains quickly, and working across the stack when needed.
 
 import Project from '../components/Project.js';
 
 <Project 
   title="Better Texter" 
-  description="Better Texter is an innovative iMessage application that enhances text communication using artificial intelligence. 
-  It allows users to convert texts into various tones like professional, friendly, or humorous, and offers translation into nine languages. 
-  A key feature is its smart voice texting, which lets users dictate messages, transforming them into well-structured texts with perfect grammar in any chosen tone. 
-  Additionally, it offers personalization options through a companion app outside of iMessage.
-  Without any dedicated marketing efforts, Better Texter has organically garnered attention and surpassed 200 downloads on the App Store, highlighting its potential and user interest." 
+  description="Better Texter is an iMessage application built to improve text communication with AI-assisted rewriting, translation, and voice-to-text workflows. It supports multiple tones, language translation, and a companion experience for personalization outside of iMessage. Without paid marketing, the product surpassed 200 App Store downloads, demonstrating early organic demand and product-market interest." 
   mediaUrl="/images/BetterTexterwebsitemv.mp4" 
 />
 ---
 <Project 
   title="Automated Tee Time Booking System" 
-  description="This automated tee time booking system is a serverless automation platform built on AWS to run time-critical booking workflows reliably across multiple golf course sites. 
-  The system uses a central “orchestrator” Lambda that selects and dispatches course-specific worker Lambdas, allowing booking attempts to run in parallel when needed. All infrastructure is
-  defined with AWS SAM, with EventBridge providing time zone–aware scheduling and AWS Secrets Manager handling credential storage.
-  
-  Each worker implements a resilient booking flow with secure session handling (including JWT-style sessions where applicable), retry logic, and bounded execution designed for serverless constraints.
-  The project also includes environment-specific deployments (staging and production) and unit/integration test scaffolding to validate Lambda behavior and external API interactions." 
+  description="This project is a serverless automation platform on AWS for time-sensitive booking workflows across multiple golf course sites. A central orchestrator Lambda routes work to course-specific worker Lambdas, enabling parallel booking attempts when required. The system uses AWS SAM for infrastructure, EventBridge for time zone-aware scheduling, and Secrets Manager for credential storage. It also includes resilient session handling, retry logic, and test scaffolding for external integrations." 
   mediaUrl="/images/TeeTimeBooking.png" 
 />
 ---
 <Project 
   title="Threading Library" 
-  description="
-  This library provides an API for C programmers to create and manage threads. It uses a round-robin scheduler, a simple method based on a queue, to decide which thread runs next. 
-  The journey of creating threads in C was both challenging and rewarding, and it involved two critical stages. The first stage was allocating memory for each thread's stack.
-  This meant setting aside a specific area in memory for each thread's operations. More than just allocating space, I meticulously prepared each stack, ensuring it was correctly 
-  configured and primed for the thread's execution. The second stage focused on smoothly transitioning control between threads while maintaining an accurate record of each thread's 
-  current state. For this, I employed a data structure to track the essential elements of each thread, such as their registers and stack pointer. Diving into this project opened my 
-  eyes to the intricate world of thread management. And I won't sugarcoat it - the debugging process was a real challenge!
-  " 
+  description="A C threading library that exposes a developer-facing API for creating and managing threads with a round-robin scheduler. The implementation required manual stack setup, thread state tracking, and context switching between execution units. This project sharpened Nick's understanding of low-level systems work, scheduling, memory layout, and the debugging discipline required for concurrency-heavy code." 
   mediaUrl="/images/threading.png" 
   projectUrl="https://github.com/nickambrose7/Threading-Library"
 />
 ---
 <Project 
   title="Divorce Prediction Machine Learning Model" 
-  description="
-  This project dives into the complexities of marital relationships using Data Science to predict divorce likelihood from survey data.
-  Our study is based on responses from Romanian couples, covering 54 aspects of a relationship, such as communication and compatibility. 
-  Our analysis involved several stages, including data preprocessing, correlation analysis, K-Means clustering, cross validation for feature selection, 
-  K-Nearest Neighbors (KNN) modeling, and sentiment analysis. A significant challenge was creating K-Means and KNN algorithms from the ground up, 
-  providing profound insights into algorithm mechanics and their application in the realm of human relationship analysis.
-  " 
+  description="A machine learning project focused on predicting divorce likelihood from survey data describing communication and relationship patterns. The work covered preprocessing, feature selection, correlation analysis, clustering, sentiment analysis, and K-nearest neighbors classification. Building key algorithms from scratch provided deeper insight into model behavior and the tradeoffs behind applied data science workflows." 
   mediaUrl="/images/divorce.png" 
   projectUrl="https://github.com/nickambrose7/Divorce-Predictor"
 />
 ---
 <Project 
   title="OAZO: A Programming Language from Scratch" 
-  description="OAZO is a functional programming language I developed, inspired by Lisp's syntax and built using Typed Racket. 
-  This project involved designing the language's syntax, parsing it into an Abstract Syntax Tree (AST), and interpreting this 
-  AST to execute OAZO code. It features anonymous functions, closures, syntactic sugar for function naming, and essential library 
-  functions. Through creating OAZO, I deepened my skills in functional programming, parsing, and language interpretation, 
-  exploring core concepts like syntactic elements, reduction rules, scope, and the transition from mutation-based to purely 
-  functional code. OAZO is a testament to applying theoretical computer science principles in language design, offering insights 
-  into the mechanics and versatility of programming languages." 
+  description="OAZO is a small functional programming language implemented in Typed Racket and inspired by Lisp-style syntax. The project involved language design, parsing, abstract syntax tree construction, interpretation, closures, and core standard-library behavior. It was a strong exercise in language implementation and in turning theoretical programming language concepts into a working runtime." 
   mediaUrl="/images/OAZO.png" 
   projectUrl="https://github.com/nickambrose7/My-Programming-Language"
 />
 ---
 <Project 
   title="File Compression Tool" 
-  description="The file compression tool is a command-line utility that compresses and decompresses files using Huffman Codes. My implementation achieves a 
-  compression ratio of around 50% on average." 
+  description="A command-line compression utility that uses Huffman coding to compress and decompress files. The implementation achieves roughly 50 percent average compression and demonstrates practical work with encoding, data structures, and file processing." 
   mediaUrl="/images/huffman.png" 
   projectUrl="https://github.com/nickambrose7/File-Compression-Tool"
 />
 ---
 <Project 
   title="Tiny File System" 
-  description="The Tiny File System (TFS) is a minimalist file system designed to execute fundamental file operations like creation, reading, writing, and deletion.
-   It integrates four main block types – superblock, inode blocks, data blocks, and free blocks – and efficiently manages them using linked lists. A key challenge
-    in this project was the complex management of these lists and ensuring rigorous error handling. I also developed a simulated disk driver library using a file 
-    to replicate disk storage. This project advanced my understanding of file system architecture, teaching me about the nuances of designing and 
-    maintaining a robust and efficient file system." 
+  description="A minimal file system built to support core operations such as file creation, reading, writing, and deletion. The design uses superblocks, inode blocks, data blocks, and free blocks, along with linked-list-based allocation tracking. The project strengthened Nick's understanding of storage design, disk abstractions, and the operational complexity behind robust low-level systems." 
   mediaUrl="/images/filesystem.png" 
   projectUrl="https://github.com/nickambrose7/Tiny-File-System"
 />
 ---
 <Project 
   title="Memory Simulator" 
-  description="The Memory Simulator is a Python script designed to emulate the functionalities of a computer's memory system. This simulator
-   translates logical memory addresses into physical addresses, while also replicating the operations of critical components such as the 
-   Translation-Lookaside-Buffer (TLB), Page Table, Disk, and RAM. A focal point of the simulator is its tracking of page faults and TLB hits, 
-   allowing us to analyze the effectiveness of different page replacement algorithms. It incorporates three page replacement algorithms:
-   First In First Out (FIFO), Least Recently Used (LRU), and Optimal. This project provided me with an exploration into the 
-   dynamics of memory management, deepening my understanding of its intricate processes and the role it plays in computing systems." 
+  description="A Python simulator for core memory-management concepts including logical-to-physical address translation, page tables, TLB behavior, disk access, and RAM operations. It tracks page faults and TLB hits while comparing FIFO, LRU, and optimal page replacement strategies. The result is both a practical simulator and a clear exercise in computer architecture fundamentals." 
   mediaUrl="/images/memory.png" 
   projectUrl="https://github.com/nickambrose7/memory-simulator"
 />
 ---
 <Project 
-  title="Mush2: The Minimally Useful Shell " 
-  description="Developed Minimally Useful SHell (mush2) a compact yet powerful shell program capable of handling essential file operations,
-   including creation, reading, writing, and deletion. Key features include interactive and batch processing modes, advanced input/output 
-   redirection with pipe support, built-in 'cd' command functionality, and signal handling. Designed to manage complex command
-  pipelines and arguments efficiently, mush2 demonstrates advanced understanding of shell architecture and process management in a Unix environment." 
+  title="Mush2: The Minimally Useful Shell" 
+  description="A compact Unix-style shell that supports interactive and batch execution, built-in commands, redirection, pipes, and signal handling. The project required process orchestration, argument parsing, and robust handling of multi-step command pipelines, making it a useful systems-programming exercise in process management and shell design." 
   mediaUrl="/images/mush2.webp" 
   projectUrl="https://github.com/nickambrose7/memory-simulator"
 />
