@@ -415,6 +415,59 @@ img.next-image {
   outline-offset: 2px;
 }
 
+.post-card-shell {
+  position: relative;
+  margin-top: 1.2rem;
+  padding: 1.15rem 1.2rem 1rem;
+  border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  border-radius: 18px;
+  background: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 92%,
+    var(--x-color-primary-100) 8%
+  );
+  box-shadow: 0 14px 34px color-mix(in srgb, currentColor 8%, transparent);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.post-card-shell:hover,
+.post-card-shell:focus-within {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--x-color-primary-600) 26%, transparent);
+  box-shadow: 0 18px 40px color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.post-card-shell h2 {
+  margin-top: 0 !important;
+}
+
+.post-card-shell h2 a {
+  position: static;
+}
+
+.post-card-shell h2 a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.post-card-shell p a,
+.post-card-shell time,
+.post-card-shell .nextra-tag {
+  position: relative;
+  z-index: 2;
+}
+
+.post-card-shell p a {
+  font-variation-settings: 'wght' 700;
+}
+
+.dark .post-card-shell {
+  background: color-mix(in srgb, var(--x-color-nextra-bg) 92%, white 8%);
+}
+
 @media (max-width: 768px) {
   .site-navbar {
     flex-wrap: wrap;
@@ -448,6 +501,10 @@ img.next-image {
   }
 
   .project-content {
+    padding: 1rem;
+  }
+
+  .post-card-shell {
     padding: 1rem;
   }
 }

@@ -29,7 +29,9 @@ export default async function TagPage(props: {
       {posts
         .filter(post => post.frontMatter.tags?.includes(tag))
         .map(post => (
-          <PostCard key={post.route} post={post as never} />
+          <div key={post.route} className="post-card-shell not-prose">
+            <PostCard post={post as never} />
+          </div>
         ))}
     </>
   )

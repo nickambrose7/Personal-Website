@@ -30,7 +30,9 @@ export default async function PostsPage() {
         ))}
       </div>
       {posts.map(post => (
-        <PostCard key={post.route} post={post as never} />
+        <div key={post.route} className="post-card-shell not-prose">
+          <PostCard post={post as never} />
+        </div>
       ))}
     </div>
   )
