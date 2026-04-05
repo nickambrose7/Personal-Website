@@ -327,6 +327,94 @@ img.next-image {
   font-variation-settings: 'wght' 720;
 }
 
+.project-card {
+  overflow: hidden;
+  max-width: 1200px;
+  border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  border-radius: 18px;
+  background: color-mix(
+    in srgb,
+    var(--x-color-nextra-bg) 92%,
+    var(--x-color-primary-100) 8%
+  );
+  box-shadow: 0 14px 34px color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.project-media {
+  overflow: hidden;
+}
+
+.project-video,
+.project-image {
+  display: block;
+  width: 100%;
+  background: #000;
+}
+
+.project-video {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-image {
+  height: 450px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-content {
+  padding: 1.25rem 1.25rem 1.1rem;
+}
+
+.project-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-variation-settings: 'wght' 760;
+}
+
+.project-description {
+  margin: 0;
+  color: color-mix(in srgb, currentColor 76%, transparent);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.project-actions {
+  margin-top: 0.9rem;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.4rem;
+  padding: 0.62rem 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--x-color-primary-600) 46%, transparent);
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--x-color-primary-500) 16%, var(--x-color-nextra-bg)),
+    color-mix(in srgb, var(--x-color-primary-700) 14%, var(--x-color-nextra-bg))
+  );
+  box-shadow: 0 12px 28px color-mix(in srgb, currentColor 8%, transparent);
+  color: inherit;
+  font-variation-settings: 'wght' 700;
+  text-decoration: none;
+}
+
+.project-button:hover,
+.project-button:focus-visible {
+  text-decoration: none;
+  border-color: color-mix(in srgb, var(--x-color-primary-700) 60%, transparent);
+}
+
+.project-button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--x-color-primary-500) 30%, transparent);
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
   .site-navbar {
     flex-wrap: wrap;
@@ -352,6 +440,15 @@ img.next-image {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0;
+  }
+
+  .project-video,
+  .project-image {
+    height: 260px;
+  }
+
+  .project-content {
+    padding: 1rem;
   }
 }
 
