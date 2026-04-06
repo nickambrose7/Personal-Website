@@ -328,43 +328,33 @@ img.next-image {
 }
 
 .project-card {
-  overflow: hidden;
   max-width: 1200px;
-  border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
-  border-radius: 18px;
-  background: color-mix(
-    in srgb,
-    var(--x-color-nextra-bg) 92%,
-    var(--x-color-primary-100) 8%
-  );
-  box-shadow: 0 14px 34px color-mix(in srgb, currentColor 8%, transparent);
+  margin: 1rem 0 1.25rem;
+  padding: 1rem;
 }
 
 .project-media {
+  position: relative;
   overflow: hidden;
+  border-radius: 18px;
+  background: #000;
 }
 
 .project-video,
 .project-image {
   display: block;
   width: 100%;
-  background: #000;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
 }
 
 .project-video {
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.project-image {
-  height: 450px;
-  object-fit: contain;
-  object-position: center;
+  transform: scale(1.08);
 }
 
 .project-content {
-  padding: 1.25rem 1.25rem 1.1rem;
+  padding: 1rem 0 0;
 }
 
 .project-title {
@@ -386,28 +376,16 @@ img.next-image {
 }
 
 .project-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.4rem;
-  padding: 0.62rem 0.95rem;
-  border: 1px solid color-mix(in srgb, var(--x-color-primary-600) 46%, transparent);
-  border-radius: 999px;
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--x-color-primary-500) 16%, var(--x-color-nextra-bg)),
-    color-mix(in srgb, var(--x-color-primary-700) 14%, var(--x-color-nextra-bg))
-  );
-  box-shadow: 0 12px 28px color-mix(in srgb, currentColor 8%, transparent);
-  color: inherit;
+  color: var(--x-color-primary-600);
   font-variation-settings: 'wght' 700;
   text-decoration: none;
 }
 
 .project-button:hover,
 .project-button:focus-visible {
-  text-decoration: none;
-  border-color: color-mix(in srgb, var(--x-color-primary-700) 60%, transparent);
+  color: var(--x-color-primary-700);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .project-button:focus-visible {
@@ -495,13 +473,12 @@ img.next-image {
     margin-left: 0;
   }
 
-  .project-video,
-  .project-image {
-    height: 260px;
+  .project-media {
+    aspect-ratio: 5 / 4;
   }
 
   .project-content {
-    padding: 1rem;
+    padding: 0.9rem 0 0;
   }
 
   .post-card-shell {

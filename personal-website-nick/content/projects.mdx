@@ -1,30 +1,26 @@
 ---
 type: page
 title: Projects
-date: 2023-12-20
+date: 2026-03-20
 ---
-
-## Selected Work
-
-The projects below show a mix of product development, backend automation, systems programming, and academic engineering work. Together they reflect how Nick approaches shipping practical software, learning unfamiliar domains quickly, and working across the stack when needed.
 
 import Project from '../components/Project.js';
 
 <Project 
   title="Better Texter" 
-  description="Better Texter is an iMessage application built to improve text communication with AI-assisted rewriting, translation, and voice-to-text workflows. It supports multiple tones, language translation, and a companion experience for personalization outside of iMessage. Without paid marketing, the product surpassed 200 App Store downloads, demonstrating early organic demand and product-market interest." 
+  description="Better Texter is an iMessage application built to improve text communication with AI-assisted rewriting, translation, and voice-to-text workflows. It supports multiple tones, language translation, and a companion app for personalization outside of iMessage. Without paid marketing, the product surpassed 200 downloads." 
   mediaUrl="/images/BetterTexterwebsitemv.mp4" 
 />
 ---
 <Project 
   title="Automated Tee Time Booking System" 
-  description="This project is a serverless automation platform on AWS for time-sensitive booking workflows across multiple golf course sites. A central orchestrator Lambda routes work to course-specific worker Lambdas, enabling parallel booking attempts when required. The system uses AWS SAM for infrastructure, EventBridge for time zone-aware scheduling, and Secrets Manager for credential storage. It also includes resilient session handling, retry logic, and test scaffolding for external integrations." 
+  description="This project is a serverless automation platform on AWS for time-sensitive booking workflows across multiple golf course sites. A central orchestrator Lambda routes work to course-specific worker Lambdas, enabling parallel booking attempts when required. The system uses AWS SAM for infrastructure, EventBridge for time zone-aware scheduling, and Secrets Manager for credential storage. It also includes resilient session handling and retry logic." 
   mediaUrl="/images/TeeTimeBooking.png" 
 />
 ---
 <Project 
   title="Threading Library" 
-  description="A C threading library that exposes a developer-facing API for creating and managing threads with a round-robin scheduler. The implementation required manual stack setup, thread state tracking, and context switching between execution units. This project sharpened Nick's understanding of low-level systems work, scheduling, memory layout, and the debugging discipline required for concurrency-heavy code." 
+  description="A C threading library that exposes a developer-facing API for creating and managing threads with a round-robin scheduler. The implementation required manual stack setup, thread state tracking, and context switching between execution units. This project sharpened my understanding of low-level systems work, scheduling, memory layout, and the debugging discipline required for concurrency-heavy code." 
   mediaUrl="/images/threading.png" 
   projectUrl="https://github.com/nickambrose7/Threading-Library"
 />
@@ -38,7 +34,7 @@ import Project from '../components/Project.js';
 ---
 <Project 
   title="OAZO: A Programming Language from Scratch" 
-  description="OAZO is a small functional programming language implemented in Typed Racket and inspired by Lisp-style syntax. The project involved language design, parsing, abstract syntax tree construction, interpretation, closures, and core standard-library behavior. It was a strong exercise in language implementation and in turning theoretical programming language concepts into a working runtime." 
+  description="OAZO is a small functional programming language implemented in Typed Racket. The project involved language design, parsing, abstract syntax tree construction, interpretation, closures, and core standard-library behavior. It was a strong exercise in language implementation and in turning theoretical programming language concepts into a working runtime." 
   mediaUrl="/images/OAZO.png" 
   projectUrl="https://github.com/nickambrose7/My-Programming-Language"
 />
@@ -52,14 +48,14 @@ import Project from '../components/Project.js';
 ---
 <Project 
   title="Tiny File System" 
-  description="A minimal file system built to support core operations such as file creation, reading, writing, and deletion. The design uses superblocks, inode blocks, data blocks, and free blocks, along with linked-list-based allocation tracking. The project strengthened Nick's understanding of storage design, disk abstractions, and the operational complexity behind robust low-level systems." 
+  description="A minimal file system built to support core operations such as file creation, reading, writing, and deletion. The design uses superblocks, inode blocks, data blocks, and free blocks, along with linked-list-based allocation tracking. The project strengthened my understanding of storage design, disk abstractions, and the operational complexity behind robust low-level systems." 
   mediaUrl="/images/filesystem.png" 
   projectUrl="https://github.com/nickambrose7/Tiny-File-System"
 />
 ---
 <Project 
   title="Memory Simulator" 
-  description="A Python simulator for core memory-management concepts including logical-to-physical address translation, page tables, TLB behavior, disk access, and RAM operations. It tracks page faults and TLB hits while comparing FIFO, LRU, and optimal page replacement strategies. The result is both a practical simulator and a clear exercise in computer architecture fundamentals." 
+  description="A Python simulator for core memory-management concepts including logical-to-physical address translation, page tables, TLB behavior, disk access, and RAM operations. It tracks page faults and TLB hits while comparing FIFO, LRU, and optimal page replacement strategies. The result is both a practical simulator and an exercise in computer architecture fundamentals." 
   mediaUrl="/images/memory.png" 
   projectUrl="https://github.com/nickambrose7/memory-simulator"
 />
@@ -68,5 +64,4 @@ import Project from '../components/Project.js';
   title="Mush2: The Minimally Useful Shell" 
   description="A compact Unix-style shell that supports interactive and batch execution, built-in commands, redirection, pipes, and signal handling. The project required process orchestration, argument parsing, and robust handling of multi-step command pipelines, making it a useful systems-programming exercise in process management and shell design." 
   mediaUrl="/images/mush2.webp" 
-  projectUrl="https://github.com/nickambrose7/memory-simulator"
 />
