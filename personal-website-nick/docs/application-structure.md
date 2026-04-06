@@ -62,7 +62,7 @@ If you change post front matter, this file is the main place that controls how p
 - [mdx-components.tsx](/Users/nickambrose/Documents/Personal-Website/personal-website-nick/mdx-components.tsx)
   This exports the Nextra blog theme’s MDX component mapping. It controls how standard Markdown/MDX elements are rendered.
 
-- [components/Project.js](/Users/nickambrose/Documents/Personal-Website/personal-website-nick/components/Project.js)
+- [components/Project.jsx](/Users/nickambrose/Documents/Personal-Website/personal-website-nick/components/Project.jsx)
 - [components/SkillCard.js](/Users/nickambrose/Documents/Personal-Website/personal-website-nick/components/SkillCard.js)
   These are custom React components used directly inside MDX content.
 
