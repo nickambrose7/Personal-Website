@@ -17,6 +17,8 @@ const EMPTY_FORM = {
   website: '',
 }
 
+const GOOGLE_BOOKING_URL = 'https://calendar.app.google/VQVJCmH1rskGsgSp8'
+
 export function LeadCaptureModal({
   open,
   sourceLabel,
@@ -122,7 +124,8 @@ export function LeadCaptureModal({
             <p className="lead-modal-eyebrow">Work with me</p>
             <h2 id="lead-modal-title">Tell me about your project</h2>
             <p className="lead-modal-copy">
-              Share a few details and I&apos;ll take a look.
+              Choose the path that fits best: send over your details and I&apos;ll
+              follow up by email, or book time with me directly.
             </p>
           </div>
           <button
@@ -134,6 +137,33 @@ export function LeadCaptureModal({
           >
             <span aria-hidden="true">×</span>
           </button>
+        </div>
+
+        <div className="lead-contact-options" aria-label="Ways to get in touch">
+          <section className="lead-contact-option" aria-labelledby="lead-email-option-title">
+            <p className="lead-contact-option-eyebrow">Option 1</p>
+            <h3 id="lead-email-option-title">Have me reach out by email</h3>
+            <p className="lead-contact-option-copy">
+              Share a few details below and I&apos;ll review your note before
+              following up.
+            </p>
+          </section>
+          <section className="lead-contact-option" aria-labelledby="lead-book-option-title">
+            <p className="lead-contact-option-eyebrow">Option 2</p>
+            <h3 id="lead-book-option-title">Book a meeting now</h3>
+            <p className="lead-contact-option-copy">
+              Prefer to skip the back-and-forth? Grab a time on my calendar
+              directly.
+            </p>
+            <a
+              className="lead-booking-link"
+              href={GOOGLE_BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Book via Google Calendar
+            </a>
+          </section>
         </div>
 
         <form className="lead-form" onSubmit={handleSubmit}>

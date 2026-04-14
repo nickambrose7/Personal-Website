@@ -637,6 +637,94 @@ img.next-image {
   flex-direction: column;
 }
 
+.lead-contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.lead-contact-option {
+  border: 1px solid color-mix(in srgb, var(--lead-border) 92%, transparent);
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--lead-surface-strong) 86%, white 14%),
+    color-mix(in srgb, var(--lead-surface) 94%, transparent)
+  );
+  padding: 1rem;
+}
+
+.lead-contact-option h3,
+.lead-contact-option p {
+  margin: 0;
+}
+
+.lead-contact-option h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.lead-contact-option-eyebrow {
+  color: var(--x-color-primary-700);
+  font-size: 0.75rem;
+  font-variation-settings: 'wght' 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem !important;
+  text-transform: uppercase;
+}
+
+.lead-contact-option-copy {
+  color: color-mix(in srgb, currentColor 68%, transparent);
+  line-height: 1.55;
+}
+
+.lead-booking-link {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--x-color-primary-700) 52%, transparent);
+  border-radius: 999px;
+  background-color: var(--x-color-primary-600);
+  background-image: linear-gradient(
+    180deg,
+    var(--x-color-primary-500),
+    var(--x-color-primary-700)
+  );
+  box-shadow:
+    0 14px 30px color-mix(in srgb, var(--x-color-primary-900) 24%, transparent),
+    inset 0 1px 0 color-mix(in srgb, white 22%, transparent);
+  color: #fff;
+  font: inherit;
+  font-variation-settings: 'wght' 700;
+  line-height: 1.1;
+  min-height: 3rem;
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-image 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lead-booking-link:hover {
+  transform: translateY(-1px);
+  background-color: var(--x-color-primary-700);
+  background-image: linear-gradient(
+    180deg,
+    var(--x-color-primary-600),
+    var(--x-color-primary-800)
+  );
+  border-color: color-mix(in srgb, var(--x-color-primary-800) 70%, transparent);
+}
+
+.lead-booking-link:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--x-color-primary-500) 32%, transparent);
+  outline-offset: 3px;
+}
+
 .lead-form .comments-field {
   margin-bottom: 1.1rem;
 }
@@ -1038,6 +1126,7 @@ img.next-image {
   }
 
   .footer-actions,
+  .lead-contact-options,
   .lead-form-grid {
     width: 100%;
   }
@@ -1046,6 +1135,7 @@ img.next-image {
     justify-content: space-between;
   }
 
+  .lead-contact-options,
   .lead-form-grid,
   .comments-form-grid,
   .comments-header,
