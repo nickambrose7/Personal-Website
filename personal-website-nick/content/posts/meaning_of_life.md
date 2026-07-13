@@ -76,7 +76,7 @@ One reason this idea stuck with me is that so many other common answers to the p
 
 One common answer is that the purpose of life is to connect with others: friendship, family, romance, community.
 
-That answer makes sense to me. Social connection clearly matters for living a [longer](https://journals.plos.org/plosmedicine/article?id=10.1371%2Fjournal.pmed.1000316) and [better](https://pubmed.ncbi.nlm.nih.gov/25350585/) life. But I do not think “connection” by itself is enough. Relationships can also be destructive, manipulative, or parasitic.
+That answer makes sense to me. Social connection clearly matters for living a [longer](https://journals.plos.org/plosmedicine/article?id=10.1371%2Fjournal.pmed.1000316) and [better](https://pubmed.ncbi.nlm.nih.gov/25350585/) life. But I do not think “connection” by itself is enough. Relationships can also be destructive.
 
 The real standard is not just whether a relationship exists, but whether it improves the well-being of the people involved. A relationship is good to the extent that it helps the people involved live better lives.
 
@@ -84,14 +84,15 @@ The real standard is not just whether a relationship exists, but whether it impr
 
 Another common answer is that the purpose of life is to have children and raise them.
 
-That is obviously one of the biggest decisions a person can make. But even here, I still find myself framing the question in terms of [well-being.](https://pmc.ncbi.nlm.nih.gov/articles/PMC7326370/) Am I capable of giving a child a decent life? Can I support them emotionally and financially? Would bringing them into the world likely result in a life worth living for them?
+That is one of the biggest decisions a person can make. But even here, I still find myself framing the question in terms of [well-being.](https://pmc.ncbi.nlm.nih.gov/articles/PMC7326370/) Am I capable of giving my child a decent life? Can I support them emotionally and financially? Would bringing them into the world likely result in a life worth living for them?
 
-The morality of this choice cannot just be reduced to whether reproduction happens. It has to involve the well-being of the child and the people responsible for them.
+Determining the morality of this choice must involve considering the well-being of the child and the people responsible for them.
+
 ### 3. Self-actualization
 
-Another answer is self-actualization: becoming the fullest, most capable version of yourself.
+Another answer is self-actualization: becoming the most capable version of yourself.
 
-This also seems to fit within a well-being framework. First, developing yourself makes you more useful to other people. A more disciplined, wise, and capable person can usually do more good than a scattered and unstable one. Second, the process of self-actualizing is [rewarding](https://link.springer.com/article/10.1007/s10902-013-9493-0) in itself. Your individual well-being will improve if you move towards goals. 
+This also seems to fit within a well-being framework. First, developing yourself makes you more useful to other people. A more disciplined, wise, and capable person can usually do more good than a scattered and unstable one. Second, the process of self-actualizing is [rewarding](https://link.springer.com/article/10.1007/s10902-013-9493-0) in itself. Your individual well-being will improve when you move towards goals. 
 
 Clearly self-actualization is closely connected to well-being both for the individual and for others.
 
@@ -99,9 +100,9 @@ Clearly self-actualization is closely connected to well-being both for the indiv
 
 [Some people](https://en.wikipedia.org/wiki/Hedonism) argue that the purpose of life is pleasure. I understand the pull of that view, but I do not think pleasure alone is enough.
 
-Pleasure matters. A good meal, a beautiful day, laughter with friends, music, love, and rest are all real parts of a good life. But pleasure cannot be the whole story, because pleasure can also come apart from morality. 
+Pleasure matters. A good meal, a beautiful day, laughter with friends, music, love, and rest are all parts of a good life. But pleasure cannot be the whole story, because pleasure can also come apart from morality. 
 
-Take a sadist for example. For him, torturing a child would be an incredibly pleasurable experience. It goes without saying, nothing about that is good.
+Take a sadist for example. For him, torturing a child would be an incredibly pleasurable experience. Obviously, nothing about that is good.
 
 Pleasure has value, but it has to be checked by a broader concern for well-being.
 
@@ -115,7 +116,7 @@ So after looking at all these different answers, I kept ending up in the same pl
 
 Realizing that well-being matters was useful, but it did not solve my actual day-to-day problem.
 
-If well-being is the thing I want to optimize for, then I still need some practical framework for answering questions like:
+If increasing well-being is the thing I want to optimize for, then I still need some practical framework for answering questions like:
 
 - What should I do when values conflict?
 - How much should I sacrifice for others?
@@ -134,7 +135,7 @@ Utilitarianism says the morally right action is the one that produces the most o
 
 But pure act-by-act utilitarianism is basically impossible to live out. Human beings are biased. We rarely have perfect information. We are bad at predicting consequences. And trying to calculate the outcome of an action in every situation is unrealistic.
 
-That is why [two-level utilitarianism](https://en.wikipedia.org/wiki/Two-level_utilitarianism) appeals to me. As I understand it, it says I should operate on two levels:
+That is why [two-level utilitarianism](https://en.wikipedia.org/wiki/Two-level_utilitarianism) appeals to me. It says I should operate on two levels:
 
 - **Everyday level:** live by strong default rules such as honesty, keeping promises, avoiding harm, and treating people fairly.
 - **Critical level:** in rare, high-stakes situations where I have unusually good information, step back and reason more directly about consequences.
@@ -151,7 +152,8 @@ Ask a simple question of each rule you come across:
 
 That is not a perfect test. But at this point in my life, it feels like a better starting point than drifting without any framework at all.
 
-Of course, I know there are plenty of people who know far more philosophy than I do and would argue that two-level utilitarianism is not the right framework. They may be right. Maybe there is no single best moral framework. What seems clear to me is that even philosophers who have spent their lives thinking about these questions are not in agreement.
+Of course, I know there are plenty of people who know far more philosophy than I do and would argue that two-level utilitarianism is not the right framework. They may be right. Maybe there is no single best moral framework. What seems clear to me is that even philosophers who have spent their lives thinking about these questions are not in agreement. 
+
 ## A Personal Framework for Prioritization
 
 Even after getting this far, I still felt stuck on one last question:
@@ -176,7 +178,7 @@ That said, there is room for nuance here. Some suffering is more important: If a
 
 I also think this framework works with innate human motivation. We are tuned to [care for those close to us](https://www.sciencedirect.com/science/article/pii/S019188692500409X). That fact does not automatically determine what is morally right, but it does matter if I care about building a life that is actually livable. Working with human nature may be the more realistic path to long-term moral action.
 
-I agree with Peter Singer that the end goal is to [expand the circle]() to all humans. I'll act in accordance with this when working in my closer circles. I won't do things that benefit my close circle at the expense of outer circles, since this is counter productive to the ultimate goal.
+I agree with Peter Singer that the end goal is to [expand the circle](https://en.wikipedia.org/wiki/The_Expanding_Circle) to all humans. I'll act in accordance with this when working in my closer circles. I won't do things that benefit my close circle at the expense of outer circles, since this is counter productive to the ultimate goal.
 
 ## Where I’ve Landed, For Now
 
@@ -188,5 +190,5 @@ I expect parts of this to change. The point of writing this publicly is to make 
 
 I also know there is very little in this essay that is entirely new. In my reading, I came across a line from Ludwig Wittgenstein that captures this well: _“The problems are solved, not by giving new information, but by arranging what we have always known.”_
 
-If you think this framework is confused, incomplete, too utilitarian, not utilitarian enough, or mistaken in some other important way, I would like to hear why!
+If you think this framework is confused, incomplete, or mistaken in some other important way, I would like to hear why!
 
